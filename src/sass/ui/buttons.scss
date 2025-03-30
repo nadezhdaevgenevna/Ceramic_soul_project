@@ -8,6 +8,23 @@
   font-size: 20px;
 }
 
+.btn-send {
+  @include button;
+  width: 220px;
+  height: 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+  &:focus {
+    border: 1px solid $ceramic;
+    outline: none;
+  }
+  &:disabled {
+    border: 1px solid $ui-disabled;
+    outline: none;
+    color: $ui-disabled;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .btn-default {
     &:hover {
@@ -19,6 +36,18 @@
       border: none;
       box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
       background: transparent;
+    }
+  }
+  .btn-send {
+    &:active {
+      border: 1px solid $ceramic;
+      outline: none;
+      border-radius: 2px;
+    }
+    &:hover {
+      border: 1px solid $ceramic;
+      border-radius: 2px;
+      color: $ceramic;
     }
   }
 }
